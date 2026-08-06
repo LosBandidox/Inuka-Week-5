@@ -1,13 +1,9 @@
-# Hackathon #1 Reflection
-**Author:** Stanley Metone
+# Hackathon #1 Reflection — Apex Innovators
 
-*(This is a scaffold — replace the bracketed detail with what actually happened on your team. Keep it to ~200 words for submission.)*
+**Problem Statement 10, Domain E: Secure, Deployable AI Tooling | Score: 84/100**
 
-The biggest technical hurdle our team faced was [e.g., merging conflicting data-cleaning approaches / disagreeing on which anomaly detection method to use / running out of time to validate our root-cause hypothesis before the deadline]. This slowed us down because [brief reason — e.g., we'd each built separate notebooks on slightly different versions of the cleaned dataset, so our numbers didn't match when we tried to combine findings].
+Our biggest technical hurdle was building a trustworthy data-quality gate under real time pressure, without a confirmed KPC dataset to validate against. We didn't know in advance which anomalies would show up in a real operational feed, so our rules risked being too loose to catch genuine problems or too strict to pass legitimate data. We resolved it by pulling a representative pilot feed ourselves, writing explicit, testable range checks for each field, and adding automated tests around every rule before wiring them into the pipeline — so we could prove the gate worked (500 rows in, four flagged, zero silently dropped) instead of just claiming it did.
 
-We resolved it by [e.g., agreeing on a single shared, version-controlled cleaning script early, and assigning one person to "own" the canonical dataset that everyone else pulled from]. This cost us time upfront but saved much more time later, since we stopped duplicating work and second-guessing each other's numbers.
+Time constraint compounded this: with only days to ship ingest, clean-and-validate, anonymize, and CI, we had little slack left to polish the pitch narrative, which shows in the judges' feedback on pacing and demo depth. Uneven contribution made it worse — build work concentrated on fewer people than planned, which compressed testing and rehearsal time.
 
-Looking back, the teamwork lesson I'd carry into the next hackathon is [e.g., agree on data ownership and a shared source of truth in the first 15 minutes, before anyone starts analysis — not after the first merge conflict]. I'd also push for a faster initial split of roles (who profiles the data, who builds visuals, who drafts the narrative) so we're working in parallel from the start rather than converging late. Overall, the technical skills were there; the coordination overhead is what cost us time, and that's the fixable part.
-
----
-*Word count target: ~200 words. Trim or expand the bracketed sections to match your real experience before submitting.*
+Next hackathon, we'd agree explicit ownership and daily check-ins on day one, not just a task list, and rehearse the demo as a full user workflow early enough to trim it, rather than finishing the build and the pitch at the same time.
