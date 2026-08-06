@@ -1,6 +1,6 @@
 # Pod Feedback — Week 5 Diagnostics Presentation
 
-**Presenter:** [Your Name]
+**Presenter:** David Kimathi Muthui
 **Format:** Pod meeting, findings presented from the Nairobi Bottleneck diagnostics report
 
 ## Skeptical Director Question
